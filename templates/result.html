@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> result page </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>
+            Here is the leave letter
+        </h1>
+        <div>
+    
+             {% if result %}
+            <pre> 
+                To,
+                the Hod sir,
+                kiet group of institutions,
+                korangi.
+            
+                sub:({{reason}})
+                respected sir 
+                i am {{name}} bearing roll_no {{roll_no}} pursuing b.tech {{Year}} {{branch}} in our college. sir i am not attending today college 
+                because {{reason}} .so please grant me permission ie:from {{from_date}} to {{to_date}}.
+            
+                thanking you sir
+            
+                                                                                  yours faithfully,
+                                                                                   {{name}},
+                                                                                   {{roll_no}}.
+                
+            </pre>
+            {% endif %}
+        </div>
+    </body>
+</html>

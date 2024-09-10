@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leave letter</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+    <body>
+        <h1> Details of Leave Letter</h1>
+        <form method="post" action="/submit">
+            <lable for="name"> name :</lable><br>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <br>
+            <br>
+            <lable for="roll-no"> Roll-no :</lable><br>
+            <input type="text" name="roll-no" id="roll-no" placeholder="Enter your roll-no" required>
+            <br>
+            <br>
+            <lable for="Year">Year :</lable><br>
+            <input type="text" name="Year" id="Year" placeholder="Enter your Year" required>
+            <br>
+            <br>
+            <lable for="branch"> Branch :</lable><br>
+            <input type="text" name="branch" id="branch" placeholder="Enter your branch" required>
+            <br>
+            <br>
+            <lable for="Reason">Reason:</lable><br>
+            <textarea rows="5" cols="50" name="reason"> Enter the reason hear </textarea>
+            <br><br>
+            <lable for="from_date">from_date</lable><br>
+            <input type="date" name="from_date" id="from_date" placeholder="Enter the from_date">
+            <br>
+            <br>
+            <lable for="to_date"> to_date</lable><br>
+            <input type="date" name="to_date" id="to_date" placeholder="Enter the to_date"><br><br>
+            <button type="submit" > submit </button><br>
+        </form>
+        {% if esult %}
+      <p>Result: {{result}}</p>
+    {% endif %}
+    
+    </body>
+</html>
